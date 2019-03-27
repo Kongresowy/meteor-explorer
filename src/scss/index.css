@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.ui.celled.table thead tr th:hover {
+  background-color: rgba(211, 211, 211, 0.6);
+  color: #282828;
+}
+
+.ui.celled.table tbody tr td:nth-of-type(6) {
+  font-size: 18px;
+}
+
+.ui.celled.table tbody tr td:nth-of-type(7) {
+  font-size: 18px;
+}
+
+.ui.celled.table tbody tr td:nth-of-type(6):hover {
+  background-color: rgba(211, 211, 211, 0.6);
+}
+
+.ui.celled.table tbody tr td:nth-of-type(7):hover {
+  background-color: rgba(211, 211, 211, 0.6);
+  color: #282828;
+}
+
+.main-div {
+  background-color: #070514;
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+  padding: 3vh 15vw 0vh 15vw;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.main-div h1 {
+  z-index: 1;
+  font-size: 3em;
+  font-weight: 700;
+  color: whitesmoke;
+  padding-top: 2vh;
+  padding-bottom: 3vh;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.main-div .ui.table {
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: whitesmoke;
+  font-weight: 700;
+}
+
+.main-div .ui.table thead {
+  height: 50px;
+}
+
+.main-div .ui.table thead tr th {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: whitesmoke;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.main-div .ui.table thead tr th.centerCell {
+  text-align: center;
+}
+
+.main-div .ui.table thead tr th:nth-of-type(1) {
+  width: 10%;
+}
+
+.main-div .ui.table thead tr th:nth-of-type(2) {
+  width: 20%;
+}
+
+.main-div .ui.table thead tr th:nth-of-type(3) {
+  width: 20%;
+}
+
+.main-div .ui.table thead tr th:nth-of-type(4) {
+  width: 10%;
+}
+
+.main-div .ui.table thead tr th:nth-of-type(5) {
+  width: 20%;
+  cursor: default;
+}
+
+.main-div .ui.table thead tr th:nth-of-type(6) {
+  width: 15%;
+}
+
+.main-div .ui.table thead tr th:nth-of-type(7) {
+  width: 10%;
+  text-align: center;
+  cursor: default;
+}
+
+.main-div .ui.table tbody tr td {
+  padding: 15px;
+}
+
+.main-div .ui.table tbody tr td:nth-of-type(2) {
+  text-transform: capitalize;
+}
+
+.main-div .ui.table tbody tr td.centerCell {
+  text-align: center;
+}
+
+.main-div .ui.table tbody tr td.locationCell pre {
+  text-align: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-div .ui.table tbody tr td.locationCell pre code:nth-of-type(2) {
+  padding-right: 20px;
+}
+
+.toggles {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-bottom: 1vh;
+}
+
+.toggles .ui.vertical.animated.button {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: rgba(211, 211, 211, 0.7);
+  width: 180px;
+  margin-right: 10px;
+}
+
+.toggles .ui.vertical.animated.button .hidden.content {
+  color: #282828;
+}
+
+.toggles .ui.vertical.animated.button .hidden.content .icon {
+  color: #282828;
+}
+
+.toggles .ui.vertical.animated.button .visible.content {
+  color: #282828;
+}
+
+.toggles .ui.vertical.animated.button .visible.content .icon {
+  color: #282828;
+}
+
+.ballotV {
+  color: green;
+  text-align: center;
+  font-size: 20px;
+}
+
+.ballotX {
+  color: red;
+  text-align: center;
+  font-size: 20px;
+}
+
+.star {
+  color: orange;
+}
+
+.pointed {
+  cursor: pointer;
+}
+
+.ui.pagination.pointing.secondary.menu {
+  border-radius: 5px;
+  background-color: rgba(211, 211, 211, 0.7);
+  z-index: 1;
+  padding-top: 1px;
+  padding-bottom: 2px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.ui.pagination.pointing.secondary.menu .item {
+  color: #282828;
+  font-size: 20px;
+}
+
+.ui.pagination.pointing.secondary.menu .active.item {
+  color: #282828;
+  font-weight: 700;
+}
+
+.ui.active.transition.visible.page.dimmer {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.ui.active.transition.visible.page.dimmer .content .ui.inverted.segment {
+  width: 60vw;
+}
+
+.ui.active.transition.visible.page.dimmer .content .ui.inverted.segment .ui.inverted.form .fields .field {
+  width: 20%;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.ui.active.transition.visible.page.dimmer .content .ui.inverted.segment .ui.inverted.form button {
+  width: 100%;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.videoBcg video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+/*# sourceMappingURL=index.css.map */
