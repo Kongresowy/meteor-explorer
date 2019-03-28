@@ -250,13 +250,16 @@ body {
     padding-bottom: 10px;
   }
   .main-div .ui.table {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   .main-div .ui.table thead tr th {
-    padding: 10px;
+    padding: 8px;
   }
   .main-div .ui.table tbody tr td {
-    padding: 10px;
+    padding: 8px;
+  }
+  .toggles {
+    padding-bottom: 0;
   }
   .ui.active.transition.visible.page.dimmer .content .ui.inverted.segment {
     width: 90vw;

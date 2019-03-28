@@ -24,7 +24,7 @@ const connection = mongoose.connection;
 connection.once('open', () => {
   Meteorites.countDocuments({}, (err, count) => {
     if (count > 0) {
-      console.log("DB has all needed records!");
+      console.log("Records in database: " + count);
     } else {
       Meteorites.insertMany(data.data);
     }

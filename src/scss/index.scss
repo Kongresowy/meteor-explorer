@@ -233,22 +233,26 @@ body {
       padding-bottom: 10px;
     }
     .ui.table {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       thead {
         tr {
           th {
-            padding: 10px;
+            padding: 8px;
           }
         }
       }
       tbody {
         tr {
           td {
-            padding: 10px;
+            padding: 8px;
           }
         }
       }
     }
+  }
+
+  .toggles {
+    padding-bottom: 0;
   }
   
   .ui.active.transition.visible.page.dimmer {
