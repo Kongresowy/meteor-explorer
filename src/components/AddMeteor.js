@@ -61,7 +61,7 @@ class AddMeteor extends React.Component {
 
   handleChangeLat = (e) => {
     let formLatitude = Number(e.target.value).toFixed(6);
-    if (formLatitude < -90 || formLatitude > 90 || e.target.value.length > 15) {
+    if (formLatitude < -90 || formLatitude > 90 || e.target.value.length > 15 ||  e.target.value.length < 1) {
       this.setState({ latChecked: false });
     } else {
       this.setState({ latitude: formLatitude, latChecked: true });
@@ -70,7 +70,7 @@ class AddMeteor extends React.Component {
 
   handleChangeLon = (e) => {
     let formLongitude = Number(e.target.value).toFixed(6);
-    if (formLongitude < -180 || formLongitude > 180 || e.target.value.length > 15) {
+    if (formLongitude < -180 || formLongitude > 180 || e.target.value.length > 15 || e.target.value.length < 1) {
       this.setState({ lonChecked: false });
     } else {
       this.setState({ longitude: formLongitude, lonChecked: true });

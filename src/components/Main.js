@@ -5,6 +5,7 @@ import { Icon, Table, Pagination, Button } from 'semantic-ui-react';
 import moment from 'moment';
 
 import AddMeteor from './AddMeteor';
+import LoaderComponent from './LoaderComponent';
 
 const maxNum = 10;
 
@@ -33,7 +34,7 @@ class Main extends React.Component {
       render: mass =>
         Number(mass)
           .toFixed(3)
-          .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,') // this RegExp formatting string to american number format with commas separated every three counts.
+          .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,') // this RegExp formatting number to american format with commas separated every three counts.
     },
     {
       key: 'fall',
@@ -281,11 +282,14 @@ class Main extends React.Component {
 
         <AddMeteor ref={instance => { this.child = instance; }} reloadData={this.props.reloadData} />
 
+        <LoaderComponent activeLoader={this.props.activeLoader} />
+
         <div className="videoBcg">
           <video playsInline muted loop autoPlay>
             <source src="https://www.stormfors.se/sites/default/kundprojekt/apsis/apsisTWO-76-v2_small-1mpbs.mp4"></source>
           </video>
         </div>
+
       </div>
     );
   }

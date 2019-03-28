@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(logger('dev'));
 
-mongoose.connect('API_URL', {
+mongoose.connect('DB_URL', {
   useNewUrlParser: true
 });
 

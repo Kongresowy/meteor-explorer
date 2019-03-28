@@ -6,6 +6,90 @@
 
 body {
   font-family: 'Noto Sans', sans-serif;
+  height: 100%;
+}
+
+.main-div {
+  background-color: #070514;
+  filter: brightness(120%);
+  padding: 0 50px 0 50px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Noto Sans', sans-serif;
+  h1 {
+    z-index: 1;
+    font-size: 45px;
+    font-weight: 700;
+    color: whitesmoke;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-family: 'Noto Sans', sans-serif;
+  }
+  .ui.table {
+    z-index: 1;
+    background-color: rgba(0,0,0,.2);
+    color: whitesmoke;
+    font-weight: 700;
+    margin-bottom: 30px;
+    thead {
+      height: 50px;
+      tr {
+        th {
+          background-color: rgba(0,0,0,.2);
+          color: whitesmoke;
+          cursor: pointer;
+          font-size: 16px;
+          text-align: center;
+        }
+        th:nth-of-type(1) {
+          width: 10%;
+        }
+        th:nth-of-type(2) {
+          width: 20%;
+        }
+        th:nth-of-type(3) {
+          width: 20%;
+        }
+        th:nth-of-type(4) {
+          width: 10%;
+        }
+        th:nth-of-type(5) {
+          width: 20%;
+          cursor: default;
+        }
+        th:nth-of-type(6) {
+          width: 10%;
+        }
+        th:nth-of-type(7) {
+          width: 10%;
+          cursor: default;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          text-align: center;
+          padding: 15px;
+        }
+        td:nth-of-type(2) {
+          text-transform: capitalize;
+        }
+        td.locationCell {
+          pre {
+            text-align: unset;
+            display: flex;
+            justify-content: space-between;
+            code:nth-of-type(2) {
+              padding-right: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .ui.celled.table{
@@ -36,102 +120,15 @@ body {
   }
 }
 
-.main-div {
-  background-color: #070514;
-  filter: brightness(120%);
-  padding: 3vh 15vw 0vh 15vw;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Noto Sans', sans-serif;
-  h1 {
-    z-index: 1;
-    font-size: 3em;
-    font-weight: 700;
-    color: whitesmoke;
-    padding-top: 2vh;
-    padding-bottom: 3vh;
-    font-family: 'Noto Sans', sans-serif;
-  }
-  .ui.table {
-    z-index: 1;
-    background-color: rgba(0,0,0,.2);
-    color: whitesmoke;
-    font-weight: 700;
-    thead {
-      height: 50px;
-      tr {
-        th {
-          background-color: rgba(0,0,0,.2);
-          color: whitesmoke;
-          cursor: pointer;
-          font-size: 16px;
-        }
-        th.centerCell {
-          text-align: center;
-        }
-        th:nth-of-type(1) {
-          width: 10%;
-        }
-        th:nth-of-type(2) {
-          width: 20%;
-        }
-        th:nth-of-type(3) {
-          width: 20%;
-        }
-        th:nth-of-type(4) {
-          width: 10%;
-        }
-        th:nth-of-type(5) {
-          width: 20%;
-          cursor: default;
-        }
-        th:nth-of-type(6) {
-          width: 15%;
-        }
-        th:nth-of-type(7) {
-          width: 10%;
-          text-align: center;
-          cursor: default;
-        }
-      }
-    }
-    tbody {
-      tr {
-        td {
-          padding: 15px;
-        }
-        td:nth-of-type(2) {
-          text-transform: capitalize;
-        }
-        td.centerCell {
-          text-align: center;
-        }
-        td.locationCell {
-          pre {
-            text-align: unset;
-            display: flex;
-            justify-content: space-between;
-            code:nth-of-type(2) {
-              padding-right: 20px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 .toggles {
   z-index: 1;
   display: flex;
   align-self: flex-start;
-  padding-bottom: 1vh;
+  padding-bottom: 15px;
   .ui.vertical.animated.button {
     font-family: 'Noto Sans', sans-serif;
     background-color: rgba(211,211,211, .7);
+    height: 40px;
     width: 180px;
     margin-right: 10px;
     .hidden.content {
@@ -220,5 +217,46 @@ body {
   }
 }
 
+.ui.active.transition.visible.dimmer {
+  position: fixed;
+}
 
+// Media
 
+@media only screen and (max-width: 1366px), (min-device-width: 1023px) and (max-device-width: 1390px)  {
+
+  .main-div {
+    padding: 0 20px 0 20px;
+    h1 {
+      font-size: 35px;
+      padding-top: 15px;
+      padding-bottom: 10px;
+    }
+    .ui.table {
+      margin-bottom: 20px;
+      thead {
+        tr {
+          th {
+            padding: 10px;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+  
+  .ui.active.transition.visible.page.dimmer {
+    .content {
+      .ui.inverted.segment {
+        width: 90vw;
+      }
+    }
+  }
+
+}

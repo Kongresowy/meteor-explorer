@@ -30,6 +30,5 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://kongresowy.github.io/meteor-explorer",
-  "proxy": "http://localhost:8080"
+  "homepage": "https://kongresowy.github.io/meteor-explorer"
 }

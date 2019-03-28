@@ -7,36 +7,14 @@
 
 body {
   font-family: 'Noto Sans', sans-serif;
-}
-
-.ui.celled.table thead tr th:hover {
-  background-color: rgba(211, 211, 211, 0.6);
-  color: #282828;
-}
-
-.ui.celled.table tbody tr td:nth-of-type(6) {
-  font-size: 18px;
-}
-
-.ui.celled.table tbody tr td:nth-of-type(7) {
-  font-size: 18px;
-}
-
-.ui.celled.table tbody tr td:nth-of-type(6):hover {
-  background-color: rgba(211, 211, 211, 0.6);
-}
-
-.ui.celled.table tbody tr td:nth-of-type(7):hover {
-  background-color: rgba(211, 211, 211, 0.6);
-  color: #282828;
+  height: 100%;
 }
 
 .main-div {
   background-color: #070514;
   -webkit-filter: brightness(120%);
           filter: brightness(120%);
-  padding: 3vh 15vw 0vh 15vw;
-  width: 100%;
+  padding: 0 50px 0 50px;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,11 +31,11 @@ body {
 
 .main-div h1 {
   z-index: 1;
-  font-size: 3em;
+  font-size: 45px;
   font-weight: 700;
   color: whitesmoke;
-  padding-top: 2vh;
-  padding-bottom: 3vh;
+  padding-top: 40px;
+  padding-bottom: 20px;
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -66,6 +44,7 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
   color: whitesmoke;
   font-weight: 700;
+  margin-bottom: 30px;
 }
 
 .main-div .ui.table thead {
@@ -77,9 +56,6 @@ body {
   color: whitesmoke;
   cursor: pointer;
   font-size: 16px;
-}
-
-.main-div .ui.table thead tr th.centerCell {
   text-align: center;
 }
 
@@ -105,25 +81,21 @@ body {
 }
 
 .main-div .ui.table thead tr th:nth-of-type(6) {
-  width: 15%;
+  width: 10%;
 }
 
 .main-div .ui.table thead tr th:nth-of-type(7) {
   width: 10%;
-  text-align: center;
   cursor: default;
 }
 
 .main-div .ui.table tbody tr td {
+  text-align: center;
   padding: 15px;
 }
 
 .main-div .ui.table tbody tr td:nth-of-type(2) {
   text-transform: capitalize;
-}
-
-.main-div .ui.table tbody tr td.centerCell {
-  text-align: center;
 }
 
 .main-div .ui.table tbody tr td.locationCell pre {
@@ -140,6 +112,28 @@ body {
   padding-right: 20px;
 }
 
+.ui.celled.table thead tr th:hover {
+  background-color: rgba(211, 211, 211, 0.6);
+  color: #282828;
+}
+
+.ui.celled.table tbody tr td:nth-of-type(6) {
+  font-size: 18px;
+}
+
+.ui.celled.table tbody tr td:nth-of-type(7) {
+  font-size: 18px;
+}
+
+.ui.celled.table tbody tr td:nth-of-type(6):hover {
+  background-color: rgba(211, 211, 211, 0.6);
+}
+
+.ui.celled.table tbody tr td:nth-of-type(7):hover {
+  background-color: rgba(211, 211, 211, 0.6);
+  color: #282828;
+}
+
 .toggles {
   z-index: 1;
   display: -webkit-box;
@@ -147,12 +141,13 @@ body {
   display: flex;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  padding-bottom: 1vh;
+  padding-bottom: 15px;
 }
 
 .toggles .ui.vertical.animated.button {
   font-family: 'Noto Sans', sans-serif;
   background-color: rgba(211, 211, 211, 0.7);
+  height: 40px;
   width: 180px;
   margin-right: 10px;
 }
@@ -239,5 +234,32 @@ body {
   max-height: 100%;
   max-width: 100%;
   margin: auto;
+}
+
+.ui.active.transition.visible.dimmer {
+  position: fixed;
+}
+
+@media only screen and (max-width: 1366px), (min-device-width: 1023px) and (max-device-width: 1390px) {
+  .main-div {
+    padding: 0 20px 0 20px;
+  }
+  .main-div h1 {
+    font-size: 35px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+  .main-div .ui.table {
+    margin-bottom: 20px;
+  }
+  .main-div .ui.table thead tr th {
+    padding: 10px;
+  }
+  .main-div .ui.table tbody tr td {
+    padding: 10px;
+  }
+  .ui.active.transition.visible.page.dimmer .content .ui.inverted.segment {
+    width: 90vw;
+  }
 }
 /*# sourceMappingURL=index.css.map */

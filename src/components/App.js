@@ -3,7 +3,8 @@ import Main from './Main';
 
 class App extends React.Component {
   state = {
-    meteorites: []
+    meteorites: [],
+    activeLoader: false
   }
 
   componentDidMount() {
@@ -12,8 +13,9 @@ class App extends React.Component {
 
   reloadData = async () => {
     try {
+      this.setState({ activeLoader: true });
       const data = await fetch('https://meteor-explorer.herokuapp.com/get').then(data => data.json());
-      this.setState({ meteorites: data.data });
+      this.setState({ meteorites: data.data, activeLoader: false });
       console.log("Meteorites fetched...", this.state.meteorites.length);
     } catch (error) {
       console.error("Error: " + error);
@@ -21,7 +23,7 @@ class App extends React.Component {
   }
 
   render() {
-    return <Main data={this.state.meteorites} reloadData={this.reloadData} />;
+    return <Main data={this.state.meteorites} reloadData={this.reloadData} activeLoader={this.state.activeLoader} />;
   }
 }
 
